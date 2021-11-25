@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/SimpleImageGallery/.vs/SimpleImageGallery
+/SimpleImageGallery/bin/Debug/netcoreapp3.1
+/SimpleImageGallery/obj
