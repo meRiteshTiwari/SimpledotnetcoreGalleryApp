@@ -8,6 +8,6 @@ namespace SimpleImageGallery.Data
     {
         IEnumerable<GalleryImage> GetAll();
         IEnumerable<GalleryImage> GetWithTag(string tag);
-        Task<GalleryImage> GetById(int id);
+        GalleryImage GetById(int id);
     }
 }

@@ -20,9 +20,9 @@ namespace SimpleImageGallery.Services
             return _ctx.GalleryImages.Include(img => img.Tags);
         }
 
-        public async Task<GalleryImage> GetById(int id)
+        public GalleryImage GetById(int id)
         {
-            return await _ctx.GalleryImages.FindAsync(id);
+            return GetAll().Where(img=>img.Id==id).First();
         }
 
         public IEnumerable<GalleryImage> GetWithTag(string tag)
