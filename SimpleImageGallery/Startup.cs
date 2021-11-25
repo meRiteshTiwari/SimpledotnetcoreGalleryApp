@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SimpleImageGallery.Data;
+using SimpleImageGallery.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace SimpleImageGallery
             services.AddDbContext<SimpleImageGalleryDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
             );
+            services.AddScoped<IImage, ImageService>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
