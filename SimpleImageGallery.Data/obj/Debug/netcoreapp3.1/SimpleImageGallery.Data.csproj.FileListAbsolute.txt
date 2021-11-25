@@ -1,0 +1,12 @@
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\bin\Debug\netcoreapp3.1\SimpleImageGallery.Data.deps.json
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\bin\Debug\netcoreapp3.1\SimpleImageGallery.Data.runtimeconfig.json
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\bin\Debug\netcoreapp3.1\SimpleImageGallery.Data.runtimeconfig.dev.json
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\bin\Debug\netcoreapp3.1\SimpleImageGallery.Data.dll
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\bin\Debug\netcoreapp3.1\SimpleImageGallery.Data.pdb
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\obj\Debug\netcoreapp3.1\SimpleImageGallery.Data.csproj.AssemblyReference.cache
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\obj\Debug\netcoreapp3.1\SimpleImageGallery.Data.AssemblyInfoInputs.cache
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\obj\Debug\netcoreapp3.1\SimpleImageGallery.Data.AssemblyInfo.cs
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\obj\Debug\netcoreapp3.1\SimpleImageGallery.Data.csproj.CoreCompileInputs.cache
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\obj\Debug\netcoreapp3.1\SimpleImageGallery.Data.dll
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\obj\Debug\netcoreapp3.1\SimpleImageGallery.Data.pdb
+D:\Projects\githubProjects\SimpledotnetcoreGalleryApp\SimpleImageGallery.Data\obj\Debug\netcoreapp3.1\SimpleImageGallery.Data.genruntimeconfig.cache
