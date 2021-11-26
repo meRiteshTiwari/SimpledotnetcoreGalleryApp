@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 using SimpleImageGallery.Data;
 using SimpleImageGallery.Data.Models;
 using System;
@@ -20,6 +22,13 @@ namespace SimpleImageGallery.Services
             return _ctx.GalleryImages.Include(img => img.Tags);
         }
 
+        public CloudBlobContainer GetBlobContainer(string azureConnectionString, string containerNamer)
+        {
+            var storageAccount = CloudStorageAccount.Parse(azureConnectionString);
+            var blobClient = storageAccount.CreateCloudBlobClient();
+            return blobClient.GetContainerReference(containerNamer);
+        }
+
         public GalleryImage GetById(int id)
         {
             return GetAll().Where(img=>img.Id==id).First();
@@ -28,6 +37,25 @@ namespace SimpleImageGallery.Services
         public IEnumerable<GalleryImage> GetWithTag(string tag)
         {
             return GetAll().Where(img => img.Tags.Any(t => t.Description == tag));
+        }
+
+        public async Task SetImage(string title, string tags, Uri uri)
+        {
+            var image = new GalleryImage
+            {
+                Title = title,
+                Tags = ParseTags(tags),
+                Url = uri.AbsoluteUri,
+                Created = DateTime.Now
+            };
+
+            _ctx.Add(image);
+            await _ctx.SaveChangesAsync();
+        }
+
+        private List<ImageTag> ParseTags(string tags)
+        {
+            return tags.Split(",").Select(tag => new ImageTag { Description = tag }).ToList();
         }
     }
 }
