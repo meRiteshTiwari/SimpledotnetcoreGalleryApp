@@ -25,6 +25,10 @@ namespace SimpleImageGallery.Controllers
                 Images = imageList,
                 SearchQuery = ""
             };
+            if (model.Images == null)
+            {
+                model.Images = new List<GalleryImage>();
+            }
             return View(model);
         }
 

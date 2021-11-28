@@ -13,6 +13,14 @@ for details on configuring this project to bundle and minify static web assets. 
     width: 280px;
 }
 
+.fullimage {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 480px;
+    width: 480px;
+}
+
+
 .gallery-image-container {
     padding: 8px;
     background: #fff;

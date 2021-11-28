@@ -1,0 +1,43 @@
+﻿@model SimpleImageGallery.Models.BlobListViewModel 
+
+<br />
+<div class="row">
+    <div class="col-9">
+        <h2 class="text-info">Blob List</h2>
+    </div>
+    <div class="col-3">
+        <a asp-action="CreateBlob" asp-controller="Blob" class="btn btn-info form-control text-white">Create New Blob</a>
+    </div>
+</div>
+
+<div class="col-12 border p-3 mt-3">
+    <form method="post">
+        @if (Model.blobContainers.Count() > 0)
+        {
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                    <th>
+                        <label asp-for="blobContainers.FirstOrDefault().Name"></label>
+                    </th>
+                    <th>
+                    </th>
+                </tr>
+                @foreach (var item in Model.blobContainers)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(m => item.Name)
+                        </td>
+                        <td>
+                            <button asp-action="DeleteBlobContainer" asp-controller="Blob" asp-route-id="@item.Id" onclick="return confirm('Are you sure want to delete')" class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p> No blob to dispay</p>
+        }
+    </form>
+</div>
