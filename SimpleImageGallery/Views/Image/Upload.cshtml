@@ -4,27 +4,27 @@
     <div class="row upload-container">
         <div class="upload-form drop-shadow" style="width:700px">
             <form asp-action="UploadNewImage" method="post" enctype="multipart/form-data" id="upload-form">
-                <div class="form-group">
+                <div class="form-group" style="width:500px;padding-left:100px">
                     <label asp-for="Title"></label>
                     <input asp-for="Title" class="form-control" />
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="width:500px;padding-left:100px">
                     <label asp-for="Tags"></label>
-                    <input asp-for="Tags" class="form-control" style="width:350px" />
+                    <input asp-for="Tags" class="form-control" />
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-4" style="width:500px;padding-left:100px">
                     <label asp-for="BlobContainer" class="control-lable"></label>
                     <select asp-for="BlobContainer" asp-items="Model.BlobContainers" class="custom-select">
                         <option value="">Choose Blob</option>
                     </select>
                 </div>
-                <div>
+                <div style="padding-left:100px">
                     <label class="btn btn-primary btn-file">
                         Browse for Image
                         <input type="file" name="file" style="display:none" />
                     </label>
                 </div>
-                <div class="submit">
+                <div class="submit" style="padding-left:100px">
                     <button type="submit" id="btn-upload" class="btn btn-info">
                         Submit
                     </button>

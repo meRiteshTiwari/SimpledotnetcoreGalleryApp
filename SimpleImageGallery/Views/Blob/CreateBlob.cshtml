@@ -4,12 +4,12 @@
     <div class="row upload-container">
         <div class="upload-form drop-shadow" style="width:700px">
             <form asp-action="CreateNewBlob" method="post" enctype="multipart/form-data" id="upload-form">
-                <div class="form-group">
+                <div class="form-group" style="width:500px;padding-left:100px">
                     <label asp-for="Name"></label>
                     <input asp-for="Name" class="form-control" />
                 </div>
                 
-                <div class="submit">
+                <div class="submit" style="padding-left:100px">
                     <button type="submit" id="btn-upload" class="btn btn-info">
                         Submit
                     </button>
